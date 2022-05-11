@@ -1,7 +1,7 @@
 package com.bridgelabz.moodanalyzer;
 /*
  * @author : Ashwini
- * I am in Any Mood ,message Should Return HAPPY
+ * Handle Exception if User Provides Invalid  Mood like null
  */
 
 public class MoodAnalyserMain {
@@ -13,12 +13,17 @@ public class MoodAnalyserMain {
     }
 
     public MoodAnalyserMain(String message) {
-        this.message=message;
+        this.message = message;
     }
+
     public String analyseMood() {
-        if (this.message.contains("Sad"))
-            return "SAD";
-        else
+        try {
+            if (this.message.contains("Sad"))
+                return "SAD";
+            else
+                return "HAPPY";
+        } catch (NullPointerException e) {
             return "HAPPY";
+        }
     }
 }
