@@ -1,7 +1,7 @@
 package com.bridgelabz.moodanalyzer;
 /*
  * @author : Ashwini
- * Handle Exception if User Provides Invalid  Mood like null
+ * Null Mood Should Return Happy
  */
 
 public class MoodAnalyserMain {
